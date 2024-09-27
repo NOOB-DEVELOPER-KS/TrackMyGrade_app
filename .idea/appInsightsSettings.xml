@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.student_developer.trackmygrade" />
+                  <option name="mobileSdkAppId" value="1:688014595717:android:2e8d9e7287e40d9b7efbec" />
+                  <option name="projectId" value="trackmygrade" />
+                  <option name="projectNumber" value="688014595717" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

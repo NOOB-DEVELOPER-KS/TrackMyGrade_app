@@ -7,38 +7,47 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="@color/primary"
+    android:background="@drawable/background"
     tools:context=".SplashActivity">
 
+    <!-- App Icon -->
 
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/track_my_progress_icon"
+        android:layout_marginBottom="30dp" />
+
+    <!-- Title -->
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:gravity="center">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="30sp"
             android:textColor="@color/red"
-
             android:textStyle="bold"
-            android:text="Track" />
+            android:text="@string/track"
+            android:layout_marginEnd="6dp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="30sp"
             android:textColor="@color/black"
-            android:text=" My Grade" />
+            android:text="@string/my_grade" />
     </LinearLayout>
 
+    <!-- Loading Indicator -->
     <ProgressBar
         android:id="@+id/progressBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:indeterminateTint="@color/white" />
-
+        android:layout_marginTop="10dp"
+        android:indeterminateTint="@android:color/white" />
 
 </LinearLayout>

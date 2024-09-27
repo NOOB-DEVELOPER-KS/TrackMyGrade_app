@@ -6,17 +6,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/primary"
-    tools:context=".LoginActivity_OTP"
-    android:weightSum="100"
-    android:gravity="center"
-    tools:ignore="ExtraText">
+    android:background="@drawable/background"
+    tools:context=".LoginActivity_OTP">
 
+    <!-- OTP Step Indicator -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="20"
-        android:gravity="center">
+        android:gravity="center"
+        android:layout_marginTop="70dp">
 
         <RelativeLayout
             android:layout_width="32dp"
@@ -65,76 +63,87 @@
                 android:textColor="@color/white"
                 android:textSize="18sp" />
         </RelativeLayout>
-
     </LinearLayout>
 
-
-    <ImageView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:src="@drawable/otp_vector"
-        app:tint="@color/white"
-        android:layout_gravity="center_horizontal"
-        android:layout_weight="40" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:layout_gravity="center_vertical"
-        android:text="@string/enter_otp_sent_to_your_mobile_number"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:letterSpacing="0.08"
-        android:layout_weight="0"
-        android:textSize="20sp" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        android:hint="@string/enter_otp"
-        android:inputType="numberPassword"
-        android:maxLength="6"
-        android:background="@drawable/edit_text_round_corner"
-        android:elevation="10dp"
-        android:layout_marginHorizontal="18dp"
-        android:padding="10dp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:textColorHint="@color/gray"
-        android:textSize="16sp" />
-
+    <!-- OTP Input Area -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:gravity="center_vertical"
-        android:orientation="vertical"
-        android:layout_weight="10">
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
 
-        <Button
+        <TextView
+            android:id="@+id/tv_login_otp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/validate_otp"
-            android:background="@drawable/btn_round_corner"
-            android:textStyle="bold"
-            android:textColor="@color/white"
-            android:backgroundTint="@color/sky_blue"
-            android:layout_marginHorizontal="50dp"
-            android:id="@+id/btn_validate_otp"
-            android:textSize="18sp" />
+            android:gravity="center_horizontal"
+            android:text="@string/enter_received_otp"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
-        <ProgressBar
-            android:layout_width="25dp"
-            android:layout_height="25dp"
+        <EditText
+            android:id="@+id/et_login_otp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:indeterminateTint="@color/white"
+            android:layout_marginHorizontal="38dp"
             android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/edit_text_round_corner"
+            android:hint="@string/otp_hint"
+            android:inputType="numberPassword"
+            android:maxLength="6"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- Validate OTP Button -->
+        <Button
+            android:id="@+id/btn_validate_otp"
+            android:layout_width="170dp"
+            android:layout_height="60dp"
+            android:backgroundTint="#375C76"
+            android:padding="10dp"
+            android:text="@string/validate_otp"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <!-- Edit Phone Number Button -->
+        <Button
+            android:id="@+id/btn_edit_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#5A7F98"
+            android:text="@string/edit_phone_number"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <!-- Progress Bar for Validation -->
+        <ProgressBar
             android:id="@+id/validate_progress"
-            android:visibility="gone" />
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:indeterminateTint="@color/red"
+            android:visibility="gone" /> <!-- Set to gone instead of invisible -->
 
+        <!-- Resend OTP Button -->
+        <Button
+            android:id="@+id/btn_resend_otp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/resend_otp"
+            android:textColor="@color/red"
+            android:textSize="12sp"
+            android:textStyle="italic"
+            android:backgroundTint="@android:color/transparent"
+            android:layout_marginTop="10dp" />
     </LinearLayout>
-
 </LinearLayout>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "688014595717",
+    "project_id": "trackmygrade",
+    "storage_bucket": "trackmygrade.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:688014595717:android:2e8d9e7287e40d9b7efbec",
+        "android_client_info": {
+          "package_name": "com.student_developer.trackmygrade"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLp6Zc7RdZ-Bl6VKOlMtc0BOfLf7WeiFM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
